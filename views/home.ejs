@@ -1,0 +1,43 @@
+<h3 class="movie-list-title">Liste des films récent</h3>
+<div class="movie-list-container">
+	<% mostRecentMovie.forEach((mostRecentMovie) => { %>
+	<div class="fresh-movie-container">
+		<a href="<%= mostRecentMovie.url %>">
+			<img src="/img/<%= mostRecentMovie.image %>" alt="<%mostRecentMovie.name%>" loading="fast" />
+			<h2><%= mostRecentMovie.name %></h2>
+		</a>
+	</div>
+	<%})%>
+</div>
+
+<h3 class="movie-list-title"><%= generateRandomCategory[0].name %></h3>
+<div class="movie-list-container">
+	<% firstCategoryGenerate.forEach((movieFirstGenerateCategory) =>{ %>
+	<div class="fresh-movie-container">
+		<a href="<%= movieFirstGenerateCategory.url %>">
+			<img
+				src="/img/<%= movieFirstGenerateCategory.image %>"
+				alt="<%= movieFirstGenerateCategory.name%>"
+				loading="fast"
+			/>
+			<h2><%= movieFirstGenerateCategory.name %></h2>
+		</a>
+	</div>
+	<% }) %>
+</div>
+
+<h3 class="movie-list-title"><%= generateRandomCategory[1].name %></h3>
+<div class="movie-list-container">
+	<% secondCategoryGenerate.forEach((movieSecondGenerateCategory) =>{ %>
+	<div class="fresh-movie-container">
+		<a href="<%= movieSecondGenerateCategory.url %>">
+			<img
+				src="/img/<%= movieSecondGenerateCategory.image %>"
+				alt="<%= movieSecondGenerateCategory.name%>"
+				loading="fast"
+			/>
+			<h2><%= movieSecondGenerateCategory.name %></h2>
+		</a>
+	</div>
+	<% }) %>
+</div>

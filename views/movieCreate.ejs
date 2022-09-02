@@ -1,0 +1,29 @@
+<div class="form-container">
+	<h2>Add Movie</h2>
+	<form action="/add/movie" method="POST" enctype="multipart/form-data">
+		<label for="name">Name of movie</label>
+		<input type="text" name="name" />
+		<label for="description">Description of Movie</label>
+		<textarea id="description" name="description"></textarea>
+		<label for="image">Image of Movie </label>
+		<input type="file" name="image" accept="image/*" />
+		<label for="category">Select Category</label>
+		<select name="category" id="form-select-category">
+			<% category.forEach(category => {%>
+			<option value="<%=category.name%>"><%=category.name%></option>
+			<%}); %>
+		</select>
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<% if(infoSubmitObj != ''){%>
+	<div class="infoSubmit-container" role="alert">
+		<p><%= infoSubmitObj %></p>
+	</div>
+	<%}%> <% if(infoErrorObj != ''){%>
+	<div class="infoError-container" role="alert">
+		<p><%= infoErrorObj[0].movie %></p>
+	</div>
+	<%}%>
+</div>

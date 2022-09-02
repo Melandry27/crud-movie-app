@@ -1,0 +1,16 @@
+<div class="movie-details-container">
+	<% movie.forEach((movie) => { %>
+	<div class="movie-details">
+		<h2 id="movie-details-name">
+			<%= movie.name %> - <a href="/category/<%= movie.category  %>"><%= movie.category %></a>
+		</h2>
+		<img src="/img/<%= movie.image %>" alt="<%movie.name%>" loading="lazy" />
+		<h2 id="movie-details-description"><%= movie.description %></h2>
+		<div id="link-details-movie-container">
+			<a class="link-details-movie" href="/movie/update/<%= movie.id %> ">Update</a>
+			<a class="link-details-movie" href="/movie/delete/<%= movie.id %> ">Delete</a>
+			<a class="link-details-movie" href="/">Back</a>
+		</div>
+	</div>
+	<%}) %>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/css/styles.css" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;900&display=swap"
+			rel="stylesheet"
+		/>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<header id="header">
+			<h1 id="layout-title">Movie Information</h1>
+			<ul id="nav-container">
+				<li class="nav" id="nav-link-home"><a href="/home" class="nav-link">Home</a></li>
+				<li class="nav" id="nav-link-category">
+					<a href="/category" class="nav-link">Category</a>
+				</li>
+				<li class="nav" id="nav-link-add-category">
+					<a href="/create/category" class="nav-link">Add Category</a>
+				</li>
+				<li class="nav" id="nav-link-add-movie">
+					<a href="/add/movie" class="nav-link">Add Movie</a>
+				</li>
+			</ul>
+		</header>
+		<main id="main">
+			<div id="contenaire"><%- body -%></div>
+		</main>
+		<footer id="footer">
+			<p>Build by Melandry MARCHAND</p>
+		</footer>
+	</body>
+</html>

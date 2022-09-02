@@ -1,0 +1,15 @@
+<% if (movie.length === 0 ) {%>
+<h1>Error Category is not exist or the category is empty</h1>
+<% } else{ %>
+
+<div id="movie-list-container">
+	<% movie.forEach((movie) => { %>
+	<div class="movie-container">
+		<a href="<%= movie.url %>">
+			<img src="/img/<%= movie.image %>" alt="<%movie.name%>" loading="lazy" />
+			<h2><%= movie.name %></h2>
+		</a>
+	</div>
+	<%}) %>
+</div>
+<%}%>

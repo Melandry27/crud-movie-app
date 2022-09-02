@@ -1,0 +1,10 @@
+<h2>Category List</h2>
+
+<% category.forEach((category) => { %>
+<div class="category-container">
+	<a href="<%= category.url %>">
+		<h2><%= category.name %></h2>
+	</a>
+	<h2><%= category.description %></h2>
+</div>
+<%})%>
